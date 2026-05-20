@@ -1,19 +1,20 @@
 # main.py
 
-def saudacao(nome: str) -> str:
-    """Retorna uma saudaÁ„o segura."""
-    if not isinstance(nome, str):
-        raise TypeError("Nome deve ser uma string")
-    return f"Ol·, {nome}! Bem-vindo ao sistema."
+def dividir(a, b):
+    return a / b
 
 
-def calcular_media(notas: list) -> float:
-    """Calcula a mÈdia de uma lista de notas."""
-    if not notas:
-        raise ValueError("Lista de notas n„o pode ser vazia")
-    return sum(notas) / len(notas)
+def saudacao(nome):
+    return f"Ol√°, {nome}!"
+
+
+def main():
+    print(saudacao("Gabriel"))
+
+    resultado = dividir(10, 2)
+
+    print(f"Resultado da divis√£o: {resultado}")
 
 
 if __name__ == "__main__":
-    print(saudacao("Aluno FATEC"))
-    print(f"MÈdia: {calcular_media([8.5, 9.0, 7.5])}")
+    main()

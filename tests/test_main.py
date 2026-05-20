@@ -1,24 +1,20 @@
 # tests/test_main.py
 
-import pytest
-
-from main import saudacao, calcular_media
-
-
-class TestSaudacao:
-    def test_saudacao_nome_valido(self):
-        resultado = saudacao("Maria")
-        assert "Maria" in resultado
-
-    def test_saudacao_tipo_invalido(self):
-        with pytest.raises(TypeError):
-            saudacao(123)
+import unittest
+from main import dividir, saudacao
 
 
-class TestCalcularMedia:
-    def test_media_simples(self):
-        assert calcular_media([10, 8, 6]) == 8.0
+class TestMain(unittest.TestCase):
 
-    def test_lista_vazia(self):
-        with pytest.raises(ValueError):
-            calcular_media([])
+    def test_dividir(self):
+        self.assertEqual(dividir(10, 2), 5)
+
+    def test_saudacao(self):
+        self.assertEqual(
+            saudacao("Gabriel"),
+            "Olá, Gabriel!"
+        )
+
+
+if __name__ == "__main__":
+    unittest.main()
