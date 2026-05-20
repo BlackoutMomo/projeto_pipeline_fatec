@@ -1,11 +1,13 @@
 # tests/test_main.py 
 
 import pytest 
+import sys
+from pathlib import Path
 
-from main import saudacao, calcular_media 
+# Add parent directory to path
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
- 
-
+from main import saudacao, calcular_media
  
 
 class TestSaudacao: 
