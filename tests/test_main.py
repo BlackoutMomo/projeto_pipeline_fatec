@@ -28,7 +28,8 @@ class TestSaudacao:
 
  
 
-class TestCalcularMedia:
+class TestCalcularMedia: 
+
     def test_media_simples(self): 
 
         assert calcular_media([10, 8, 6]) == 8.0 
