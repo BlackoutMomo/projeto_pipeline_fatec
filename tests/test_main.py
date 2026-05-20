@@ -40,4 +40,4 @@ class TestCalcularMedia:
 
         with pytest.raises(ValueError): 
 
-            calcular_media([])
+            calcular_media([]) 
