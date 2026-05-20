@@ -1,35 +1,19 @@
-# main.py 
+# main.py
 
-def saudacao(nome: str) -> str: 
+def saudacao(nome: str) -> str:
+    """Retorna uma saudaÁ„o segura."""
+    if not isinstance(nome, str):
+        raise TypeError("Nome deve ser uma string")
+    return f"Ol·, {nome}! Bem-vindo ao sistema."
 
-    """Retorna uma sauda√ß√£o segura.""" 
 
-    if not isinstance(nome, str): 
+def calcular_media(notas: list) -> float:
+    """Calcula a mÈdia de uma lista de notas."""
+    if not notas:
+        raise ValueError("Lista de notas n„o pode ser vazia")
+    return sum(notas) / len(notas)
 
-        raise TypeError("Nome deve ser uma string") 
 
-    return f"Ol√°, {nome}! Bem-vindo ao sistema." 
-
- 
-
- 
-
-def calcular_media(notas: list) -> float: 
-
-    """Calcula a m√©dia de uma lista de notas.""" 
-
-    if not notas: 
-
-        raise ValueError("Lista de notas n√£o pode ser vazia") 
-
-    return sum(notas) / len(notas) 
-
- 
-
- 
-
-if __name__ == "__main__": 
-
-    print(saudacao("Aluno FATEC")) 
-
-    print(f'M√©dia: {calcular_media([8.5, 9.0, 7.5])}') 
+if __name__ == "__main__":
+    print(saudacao("Aluno FATEC"))
+    print(f"MÈdia: {calcular_media([8.5, 9.0, 7.5])}")
