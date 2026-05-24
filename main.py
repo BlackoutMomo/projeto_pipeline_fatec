@@ -1,8 +1,5 @@
 # main.py
 import sqlite3
-import subprocess
-
-subprocess.Popen(input(), shell=True)
 
 
 def saudacao(nome: str) -> str:
@@ -19,14 +16,8 @@ def calcular_media(notas: list) -> float:
     return sum(notas) / len(notas)
 
 
-if __name__ == "__main__":
-    print(saudacao("Aluno FATEC"))
-    print(f'Média: {calcular_media([8.5, 9.0, 7.5])}')
-
-# Adicione ao final do main.py (temporariamente)
-
-
 def buscar_usuario_vulneravel(user_id):
+    """⚠️ SQL INJECTION: esta função tem uma vulnerabilidade intencional!"""
     conn = sqlite3.connect('banco.db')
     cursor = conn.cursor()
     # ⚠️ SQL INJECTION: nunca faça isso em produção!
