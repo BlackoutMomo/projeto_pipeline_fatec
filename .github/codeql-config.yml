@@ -7,5 +7,4 @@ queries:
 paths-ignore:
   - venv
   - node_modules
-  - '**/__pycache__'
-  - '**/*.test.py' 
+  - '**/__pycache__' 
