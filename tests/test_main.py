@@ -1,39 +1,43 @@
-# tests/test_main.py
+# tests/test_main.py 
 
-import pytest
-import sys
-from pathlib import Path
+import pytest 
 
-# Add parent directory to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+from main import saudacao, calcular_media 
 
-from main import saudacao, calcular_media
+ 
 
+ 
 
-class TestSaudacao:
+class TestSaudacao: 
 
-    def test_saudacao_nome_valido(self):
+    def test_saudacao_nome_valido(self): 
 
-        resultado = saudacao("Maria")
+        resultado = saudacao("Maria") 
 
-        assert "Maria" in resultado
+        assert "Maria" in resultado 
 
+ 
 
-    def test_saudacao_tipo_invalido(self):
+    def test_saudacao_tipo_invalido(self): 
 
-        with pytest.raises(TypeError):
+        with pytest.raises(TypeError): 
 
-            saudacao(123)
+            saudacao(123) 
 
+ 
 
-class TestCalcularMedia:
+ 
 
-    def test_media_simples(self):
+class TestCalcularMedia: 
 
-        assert calcular_media([10, 8, 6]) == 8.0
+    def test_media_simples(self): 
 
-    def test_lista_vazia(self):
+        assert calcular_media([10, 8, 6]) == 8.0 
 
-        with pytest.raises(ValueError):
+ 
 
-            calcular_media([])
+    def test_lista_vazia(self): 
+
+        with pytest.raises(ValueError): 
+
+            calcular_media([]) 
