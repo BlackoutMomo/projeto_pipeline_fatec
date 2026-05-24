@@ -8,9 +8,6 @@ Autor: Professor FATEC
 Disciplina: Desenvolvimento de Sistemas
 """
 
-import sqlite3 
-
-
 def saudacao(nome: str) -> str:
     """
     Retorna uma saudação personalizada.
@@ -91,16 +88,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-def buscar_usuario_vulneravel(user_id):
-
-    conn = sqlite3.connect('banco.db')
-
-    cursor = conn.cursor()
-
-    # ⚠️ SQL INJECTION: nunca faça isso em produção! 
-
-    cursor.execute(f"SELECT * FROM users WHERE id={user_id}")
-
-    return cursor.fetchone()
