@@ -1,7 +1,6 @@
 # main.py
 import sqlite3
 import subprocess
-import os
 
 
 def buscar_usuario(user_id):
