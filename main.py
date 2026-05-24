@@ -2,6 +2,17 @@
 import sqlite3
 import subprocess
 
+def saudacao(nome: str) -> str:
+    if not isinstance(nome, str):
+        raise TypeError("Nome deve ser uma string")
+    return f"Olá, {nome}! Bem-vindo ao sistema."
+
+
+def calcular_media(notas: list) -> float:
+    if not notas:
+        raise ValueError("Lista de notas não pode ser vazia")
+    return sum(notas) / len(notas)
+
 
 def buscar_usuario(user_id):
     conn = sqlite3.connect('banco.db')
