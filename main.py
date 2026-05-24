@@ -12,7 +12,7 @@ def saudacao(nome: str) -> str:
 def calcular_media(notas: list) -> float:
     """Calcula a média de uma lista de notas."""
     if not notas:
-        raise ValueError(Lista de notas não pode ser vazia")
+        raise ValueError("Lista de notas não pode ser vazia")
     return sum(notas) / len(notas)
 
 
