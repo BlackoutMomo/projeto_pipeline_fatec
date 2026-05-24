@@ -51,11 +51,8 @@ if __name__ == "__main__":
     main()
 
 
-def buscar_usuario_vulneravel(username):
-    # ❌ VULNERÁVEL: concatenação direta do input do usuário
-    conn = sqlite3.connect('database.db')
+def buscar_usuario_seguro(user_id):
+    conn = sqlite3.connect('banco.db')
     cursor = conn.cursor()
-
-    query = f"SELECT * FROM usuarios WHERE username = '{username}'"
-    cursor.execute(query)
-    return cursor.fetchall()
+    cursor.execute("SELECT * FROM users WHERE id=?", (user_id,))
+    return cursor.fetchone()
