@@ -17,3 +17,4 @@ def calcular_media(notas: list) -> float:
 if __name__ == "__main__":
     print(saudacao("Aluno FATEC"))
     print(f'Média: {calcular_media([8.5, 9.0, 7.5])}')
+    
